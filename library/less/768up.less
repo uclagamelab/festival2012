@@ -21,6 +21,10 @@ IE will get all the styles without any hefty work.
 
 .768up() { /* DO NOT DELETE */
 
+/* import mixins */
+@import "mixins";
+@import "grid";
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -71,51 +75,29 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+@total-width: 100%;
 
 .wrap {
 	max-width: 960px - (18*2);
 	width: 75%;
 
 }
-	/***** Grid Options down here, where they are usable ******/
-	/* This is using the 1140 Grid System: http://cssgrid.net/ */
-	.onecol    { width: 4.85%;  } /* grid_1  */
-	.twocol    { width: 13.45%; } /* grid_2  */
-	.threecol  { width: 22.05%; } /* grid_3  */
-	.fourcol   { width: 30.75%; } /* grid_4  */
-	.fivecol   { width: 39.45%; } /* grid_5  */
-	.sixcol    { width: 48%;    } /* grid_6  */
-	.sevencol  { width: 56.75%; } /* grid_7  */
-	.eightcol  { width: 65.4%;  } /* grid_8  */
-	.ninecol   { width: 74.05%; } /* grid_9  */
-	.tencol    { width: 82.7%;  } /* grid_10 */
-	.elevencol { width: 91.35%; } /* grid_11 */
-	.twelvecol { width: 100%;   } /* grid_12 */
-	
-	/* layout & column defaults */
-	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol { 
-		float: left; 
-		position: relative;
-		margin-right: 3.8%; 
-	}
-	
-	/* adding float to large column */
-	.twelvecol {
-		float: left;
-		position: relative;
-	}
-	
-	/* default styles & fixes */
-	.last  { 
-		margin-right: 0; 
-		float: right;
-	}
+
 
 /*********************
 HEADER SYTLES
 *********************/
 
-.header {}
+.header {
+	#inner-header{
+		height:350px;
+	}
+}
 
 	#logo {
 		margin-top:90px;
@@ -131,14 +113,19 @@ NAVIGATION STYLES
 
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
-		
+		margin-top: -4em; 
+
 		ul {
 			
-
+			max-width:380px;
+			margin: 0 auto;
 			
 			li {
 				float: left;
 				position: relative;
+				border-right: 1px solid @gaf-blue;
+				border-top:none;
+				padding:0;
 				
 				a {
 					border-bottom: 0;

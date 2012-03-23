@@ -185,15 +185,19 @@ HEADER SYTLES
 .header {
 	#inner-header{
 		background: #420a23 url('../images/header.png') no-repeat;
-		height:300px;
 	}
 }
 
 	#logo {
+
+		margin-top:90px;
+		padding-top:20px;
+		padding-bottom:160px;
+
 		text-align: center;
 
 		font-size:1.5em;
-		background-color: rgba(0,0,0,0.5);
+		background-color: @gaf-smoke;
 		span#logo-line-1{ color:@gaf-pink;}
 		span#logo-line-2{ color:@gaf-blue;}
 		span#logo-line-3{ color:@gaf-yellow;}
@@ -207,15 +211,17 @@ NAVIGATION STYLES
 
 	/* .menu is clearfixed inside mixins.less */
 	.menu {
-		margin-top: -4em; 
+		
 
 	
 		ul {
-			
+			margin-top:-170px;
 			
 			li {
-				border-right: 1px solid @gaf-blue; 
-			
+				// background-color:@gaf-smoke;
+				border-top: 1px solid #000;
+				text-align:center;
+				padding:8px 0;
 				a {
 					color: @gaf-blue;
 					display: block;

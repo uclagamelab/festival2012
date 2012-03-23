@@ -816,9 +816,11 @@ HEADER SYTLES
 *********************/
 .header #inner-header {
   background: #420a23 url('../images/header.png') no-repeat;
-  height: 300px;
 }
 #logo {
+  margin-top: 90px;
+  padding-top: 20px;
+  padding-bottom: 160px;
   text-align: center;
   font-size: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
@@ -837,11 +839,11 @@ NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.less */
 .menu {
-  margin-top: -4em;
   /* end .menu ul */
 
 }
 .menu ul {
+  margin-top: -170px;
   /* end .menu ul li */
 
   /* highlight current page */
@@ -850,7 +852,9 @@ NAVIGATION STYLES
 
 }
 .menu ul li {
-  border-right: 1px solid #00aeef;
+  border-top: 1px solid #000;
+  text-align: center;
+  padding: 8px 0;
   /*
 				so you really have to rethink your dropdowns for mobile.
 				you don't want to have it expand too much because the
