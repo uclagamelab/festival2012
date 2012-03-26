@@ -27,6 +27,26 @@ TOOLS
 	display: block;
 }
 
+// New image replacement
+// -------------------------
+// Source: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+
+// Sizing shortcuts
+// -------------------------
+.size(@height: 5px, @width: 5px) {
+  width: @width;
+  height: @height;
+}
+.square(@size: 5px) {
+  .size(@size, @size);
+}
+
 /*********************
 CLEARFIXIN'
 *********************/
@@ -49,8 +69,10 @@ COLORS
 *********************/
 
 @gaf-blue: 			#00aeef;
-@gaf-yellow:		#f6f5c6;
+@gaf-yellow:		#f0b927;
+@gaf-cream:			#f6f5c6;
 @gaf-pink:			#ed145b;
+@gaf-white:			#f8f7e6;
 @gaf-smoke:			rgba(0,0,0,0.5);
 
 @yellow:            #ebe16f;

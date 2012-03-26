@@ -4,14 +4,14 @@ Author: Eddie Machado
 
 This file should contain any js scripts you want to add to the site.
 Instead of calling it in the header or throwing it inside wp-head()
-this file will be called automatically in the footer so as not to 
+this file will be called automatically in the footer so as not to
 slow the page load.
 
 */
 
 // Modernizr.load loading the right scripts only if you need them
 Modernizr.load([
-	{
+    {
     // Let's see if we need to load selectivizr
     test : Modernizr.borderradius,
     // Modernizr.load loads selectivizr and Respond.js for IE6-8
@@ -24,7 +24,18 @@ Modernizr.load([
 jQuery(document).ready(function($) {
 	
 	// add all your scripts here
-	
+
+    //add little flag tips to image captions
+	$('p.wp-caption-text').after('<div class="flag-tip"></div>');
+    $('div.flag-tip').css({
+        "height": "22px",
+        "width" : "22px",
+        "background": "url("+wordpressInfo.template_dir+"/library/images/small_tag.gif) no-repeat",
+        "position": "relative",
+        "top":"-83px"
+    });
+    $('div.flag-tip').css("left", function(){return $(this).prev("p.wp-caption-text").width() + 20;});
+
  
 }); /* end of as page load scripts */
 
@@ -40,12 +51,12 @@ jQuery(function($) {
  
         // focus and blur of placeholders
         $('[placeholder]').focus(function() {
-            if ($(this).val() == $(this).attr('placeholder')) {
+            if ($(this).val() === $(this).attr('placeholder')) {
                 $(this).val('');
                 $(this).removeClass('placeholder');
             }
         }).blur(function() {
-            if ($(this).val() == '' || $(this).val() == $(this).attr('placeholder')) {
+            if ($(this).val() === '' || $(this).val() === $(this).attr('placeholder')) {
                 $(this).val($(this).attr('placeholder'));
                 $(this).addClass('placeholder');
             }
@@ -54,7 +65,7 @@ jQuery(function($) {
         // remove placeholders on submit
         $('[placeholder]').closest('form').submit(function() {
             $(this).find('[placeholder]').each(function() {
-                if ($(this).val() == $(this).attr('placeholder')) {
+                if ($(this).val() === $(this).attr('placeholder')) {
                     $(this).val('');
                 }
             });
@@ -107,7 +118,7 @@ jQuery(function($) {
         if( !w.orientation && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
 			if( enabled ){
 				disableZoom();
-			}        	
+			}
         }
 		else if( !enabled ){
 			restoreZoom();

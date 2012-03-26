@@ -39,7 +39,7 @@ body {
 	font-family: Georgia, serif;
 	font-size: 14px;
 	line-height: 1.5;
-	color: #565656;
+	color: @gaf-white;
 }
 
 /********************
@@ -112,7 +112,7 @@ LINK STYLES
 *********************/
 
 a, a:visited { 
-	color: #f01d4f; 
+	color: @gaf-yellow; 
 
 	/* on hover */
 	&:hover, &:focus {
@@ -167,7 +167,7 @@ h2, .h2 {
 	margin-bottom: 0.375em; 
 
 	a{
-		color: #00aeef;
+		color: @gaf-pink;
 	}
 }
 
@@ -211,7 +211,7 @@ HEADER SYTLES
 		background-color: @gaf-smoke;
 		span#logo-line-1{ color:@gaf-pink;}
 		span#logo-line-2{ color:@gaf-blue;}
-		span#logo-line-3{ color:@gaf-yellow;}
+		span#logo-line-3{ color:@gaf-cream;}
 	}
 	
 /*********************
@@ -343,7 +343,7 @@ POSTS & CONTENT STYLES
 	
 		/* post meta */
 		.meta {
-			color: #999;
+			color: @gaf-blue;
 		
 			time {}
 		}
@@ -398,6 +398,7 @@ POSTS & CONTENT STYLES
 			img { 
 				margin: 0 0 1.5em 0; 
 				max-width: 100%; 
+				border:1px solid @gaf-pink;
 			}
 			
 			/*
@@ -423,9 +424,8 @@ POSTS & CONTENT STYLES
 		} /* end .post-content */
 			
 		.wp-caption {
-			background: #eee;
+			// background: #eee;
 			padding: 5px;
-			
 			/* images inside wp-caption */
 			img {
 				margin-bottom: 0;
@@ -433,10 +433,16 @@ POSTS & CONTENT STYLES
 			}
 			
 			p.wp-caption-text {
+				display: inline-block;
+				position:relative;
+				background:#000;
 				font-size: 0.85em;
-				margin: 4px 0 7px;
-				text-align: center;
+				padding: 2px 10px;
+				top:-50px;
+				text-align: left;
 			}
+
+			div.flag-tip{}
 			
 		} /* end .wp-caption */
 			
