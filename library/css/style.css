@@ -104,6 +104,11 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  body {
+    background-image: url(../images/background_texture.gif);
+    background-position: left top;
+    background-repeat: repeat;
+  }
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -429,7 +434,7 @@ you can add resource intensive styles.
   @font-face {
     font-family: 'Unibody8Bold';
     src: url('../fonts/unibody_8-bold-webfont.eot');
-    src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
+    src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/unibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -830,6 +835,11 @@ you can add resource intensive styles.
 @media only screen and (min-width: 1030px) {
   /* styles in 1030up.less */
   /* DO NOT DELETE */
+  body {
+    background-image: url(../images/background_skull.png), url(../images/background_texture.gif);
+    background-position: center 90px, left top;
+    background-repeat: no-repeat, repeat;
+  }
 }
 /* end of media query */
 /******************************************************************

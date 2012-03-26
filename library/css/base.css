@@ -578,7 +578,7 @@ TYPOGRAPHY
 @font-face {
   font-family: 'Unibody8Bold';
   src: url('../fonts/unibody_8-bold-webfont.eot');
-  src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
+  src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/unibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -706,6 +706,9 @@ LAYOUT & GRID STYLES
   background-color: #420a23;
   padding-left: 18px;
   padding-right: 18px;
+  border: 1px solid #ed145b;
+  border-top: none;
+  border-bottom: none;
 }
 /*
 No Grid? Say Whaaaat?

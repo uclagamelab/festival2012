@@ -89,6 +89,11 @@ responsive stylesheet.
 /*********************
 GENERAL STYLES
 *********************/
+body {
+  background-image: url(../images/background_texture.gif);
+  background-position: left top;
+  background-repeat: repeat;
+}
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -404,7 +409,7 @@ TYPOGRAPHY
 @font-face {
   font-family: 'Unibody8Bold';
   src: url('../fonts/unibody_8-bold-webfont.eot');
-  src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
+  src: url('../fonts/unibody_8-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/unibody_8-bold-webfont.woff') format('woff'), url('../fonts/unibody_8-bold-webfont.ttf') format('truetype'), url('../fonts/unibody_8-bold-webfont.svg#Unibody8Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -795,6 +800,11 @@ FOOTER STYLES
 }
 /* end .footer-links */
 /* DO NOT DELETE */
+body {
+  background-image: url(../images/background_skull.png), url(../images/background_texture.gif);
+  background-position: center 90px, left top;
+  background-repeat: no-repeat, repeat;
+}
 /******************************************************************
 ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry
