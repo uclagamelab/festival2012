@@ -20,10 +20,16 @@ http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
 IMPORTING STYLES
 *********************/
 
-/* import reset */
 @import "normalize";
-/* import mixins */
 @import "mixins";
+@import "grid";
+
+// Specify the number of columns and set column and gutter widths
+@columns: 24;
+@column-width: 30;
+@gutter-width: 10;
+
+@total-width: 100%;
 
 /*********************
 GENERAL STYLES
@@ -192,7 +198,9 @@ HEADER SYTLES
 }
 
 	#logo {
-
+		// width:921px;
+		margin-left:-18px;
+		margin-right:-18px;
 		margin-top:90px;
 		padding-top:20px;
 		padding-bottom:160px;
@@ -302,8 +310,8 @@ POSTS & CONTENT STYLES
 
 #content { 
 	// margin-top: 2.2em; 
-}
-	
+}	
+		
 		.hentry {
 		
 			header {
@@ -342,15 +350,19 @@ POSTS & CONTENT STYLES
 			
 		/* post content */
 		.post-content {
-			
+			.column(24);
+
 			p {}
 			
 			
 			ul, ol, table, dl {}
 			
 			ul, ol {
-				
-				li {}
+				.column(22);
+				.push(1);
+				.pull(1);
+				li {
+				}
 			
 			}
 			
@@ -830,7 +842,8 @@ COMMENT FORM STYLES
 	
 	/* no comments */
 	.nocomments { 
-		margin: 0 20px 1.1em; 
+		// margin: 20px 20px 1.1em; 
+		margin-top:20px;
 	}	
 	
 /*********************

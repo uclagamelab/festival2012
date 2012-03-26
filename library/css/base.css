@@ -18,7 +18,6 @@ http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
 /*********************
 IMPORTING STYLES
 *********************/
-/* import reset */
 /*! normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -440,7 +439,6 @@ small,
 .small {
   font-size: 75%;
 }
-/* import mixins */
 /******************************************************************
 Site Name: 
 Author: 
@@ -653,6 +651,27 @@ BOX SIZING
 BOX SHADOW
 *********************/
 /* .boxShadow(0 0 4px #444); */
+body {
+  width: 100%;
+  zoom: 1;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
 /*********************
 GENERAL STYLES
 *********************/
@@ -821,6 +840,8 @@ HEADER SYTLES
   background: #420a23 url('../images/header.png') no-repeat;
 }
 #logo {
+  margin-left: -18px;
+  margin-right: -18px;
   margin-top: 90px;
   padding-top: 20px;
   padding-bottom: 160px;
@@ -907,6 +928,10 @@ POSTS & CONTENT STYLES
 }
 /* post content */
 .post-content {
+  display: inline;
+  float: left;
+  width: 98.95833333333334%;
+  margin: 0 0.5208333333333333%;
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning 
@@ -914,6 +939,15 @@ POSTS & CONTENT STYLES
 			but it's up to you. Feel free to change it up.
 			*/
 
+}
+.post-content ul,
+.post-content ol {
+  display: inline;
+  float: left;
+  width: 90.625%;
+  margin: 0 0.5208333333333333%;
+  margin-left: 4.687499999999999%;
+  margin-right: 4.687499999999999%;
 }
 .post-content dd {
   margin-left: 0;
@@ -1209,7 +1243,7 @@ COMMENT FORM STYLES
 }
 /* no comments */
 .nocomments {
-  margin: 0 20px 1.1em;
+  margin-top: 20px;
 }
 /*********************
 SIDEBARS & ASIDES
