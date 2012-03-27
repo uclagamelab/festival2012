@@ -256,7 +256,6 @@ NAVIGATION STYLES
 				}
 				
 				&:last-child {
-					border:none;
 				}
 				
 				/*
@@ -310,6 +309,9 @@ POSTS & CONTENT STYLES
 
 #content { 
 	// margin-top: 2.2em; 
+	div#inner-content{
+		border-bottom:1px solid @gaf-pink;
+	}
 }	
 		
 		.hentry {
@@ -436,13 +438,19 @@ POSTS & CONTENT STYLES
 				display: inline-block;
 				position:relative;
 				background:#000;
-				font-size: 0.85em;
-				padding: 2px 10px;
+				font-size: 0.80em;
+				padding: 4px 10px;
 				top:-50px;
 				text-align: left;
 			}
 
-			div.flag-tip{}
+			div.flag-tip{
+				height: 22px;
+        		width : 22px;
+        		background: url(../images/small_tag.gif) no-repeat;
+        		position: relative;
+        		top:-81px;
+			}
 			
 		} /* end .wp-caption */
 			
@@ -897,6 +905,10 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	div#inner-footer{
+		background:@black;
+		border:none;
+	}
 }
 	
 	/*

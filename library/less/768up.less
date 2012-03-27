@@ -110,8 +110,11 @@ NAVIGATION STYLES
 .nav {}
 
 	/* .menu is clearfixed inside mixins.less */
-	.menu {
+	nav.nav div.menu{
 		margin-top: -4em; 
+	}
+	.menu {
+		
 
 		ul {
 			
@@ -124,6 +127,7 @@ NAVIGATION STYLES
 				border-right: 1px solid @gaf-blue;
 				border-top:none;
 				padding:0;
+				text-transform:uppercase;
 				
 				a {
 					border-bottom: 0;
@@ -139,7 +143,10 @@ NAVIGATION STYLES
 				}
 				
 				&:first-child {}
-				&:last-child {}
+				&:last-child {
+					border:none;
+
+				}
 				
 				/*
 				plan your menus and drop-downs wisely.
@@ -638,7 +645,38 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-.footer {}
+.footer {
+	.footer-logo{
+		.hide-text;
+		display:inline-block;
+		float: left;
+		padding-right:2%;
+	}
+	#HSA{
+		width:53px;
+		height:22px;
+		background: url(../images/HSA_logo.png) no-repeat;
+		// padding-right:10px;
+	}
+	#HAMMER{
+		width:113px;
+		height:23px;
+		background: url(../images/hammer_logo.png) no-repeat;
+		// padding-right:10px;
+	}
+	#TFT{
+		width:119px;
+		height:33px;
+		background: url(../images/TFT_logo.png) no-repeat;
+		// padding-right:10px;
+	}
+	#Arts{
+		width:147px;
+		height:44px;
+		background: url(../images/arts_logo.png) no-repeat;
+		// padding-right:10px;
+	}
+}
 	
 	/*
 	you'll probably need to do quite a bit
@@ -646,8 +684,11 @@ FOOTER STYLES
 	mobile. Make sure to double check these!
 	*/
 	.footer-links {
+		padding: 10px 0 20px 0;
 		ul {
+			
 			li {
+
 				a {
 					&:hover {}
 				}
@@ -660,8 +701,24 @@ FOOTER STYLES
 			}
 		}
 	} /* end .footer-links */
-			
-	.attribution {}
+
+
+	div#inner-footer{
+		nav{
+			.column(12);
+		}
+		p{
+			.column(4);
+			font-size:.8em;
+			padding-right:2%;
+		}
+		aside{
+			.column(10);
+		}
+	}
+
+
+
 		
 
 } /* end of the function (DO NOT DELETE) */

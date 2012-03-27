@@ -21,6 +21,9 @@ inside of media queries. We also do this so we can
 call this function in the ie.less file. Which means
 IE will get all the styles without any hefty work.
 */
+/* import mixins */
+@import "mixins";
+@import "grid";
 
 .481up() { /* DO NOT DELETE */
 
@@ -29,9 +32,9 @@ GENERAL STYLES
 *********************/
 
 body {
-	background-image: url(../images/background_texture.gif);
-	background-position: left top;
-	background-repeat: repeat;
+	background-image: url(../images/footer_background.gif), url(../images/background_texture.gif);
+	background-position: left bottom, left top;
+	background-repeat: repeat-x, repeat;
 }
 
 /*********************
@@ -433,6 +436,7 @@ SIDEBARS & ASIDES
 				/* deep nesting */
 				ul {}
 			}
+
 		}
 	}
 
@@ -448,7 +452,23 @@ FOOTER STYLES
 	*/
 	.footer-links {
 		ul {
-			li {}
+			// max-width:380px;
+			li {
+				float: left;
+				position: relative;
+				border-right: 1px solid @gaf-blue;
+				border-top:none;
+				padding:0 6px;
+				text-transform:uppercase;
+
+				a{
+					color:@gaf-blue;
+				}
+				&:last-child{
+					border:none;
+				}
+			}
+
 		}
 	} /* end .footer-links */
 			
