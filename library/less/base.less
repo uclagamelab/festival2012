@@ -36,8 +36,8 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: Georgia, serif;
-	font-size: 14px;
+	font-family: DejaVuSansMonoBook;
+	font-size: 12px;
 	line-height: 1.5;
 	color: @gaf-white;
 }
@@ -457,14 +457,24 @@ POSTS & CONTENT STYLES
 				
 			}
 			
-			dt {}
+			dt {
+
+			}
 			
-			dd {}
+			dd {
+				color: @gaf-white;
+				width:auto;
+				display: inline-block;
+				padding:5px;
+			}
 		
 		} /* end .gallery */
 		
 		/* gallery caption styles */	
-		.gallery-caption {}
+		.gallery-caption {
+			background-color: @black;
+			.borderRadius(5px);
+		}
 		
 		.size-full {}
 		.size-large {}

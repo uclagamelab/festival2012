@@ -24,6 +24,8 @@ Modernizr.load([
 jQuery(document).ready(function($) {
 	
 	// add all your scripts here
+    $('dd.gallery-caption').prev('dt.gallery-icon').css("background", "url("+wordpressInfo.template_dir+"/library/images/image_caption_tip.png) bottom center no-repeat");
+
 
     //add little flag tips to image captions
 	$('p.wp-caption-text').after('<div class="flag-tip"></div>');
