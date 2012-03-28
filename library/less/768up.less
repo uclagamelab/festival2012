@@ -81,7 +81,7 @@ LAYOUT & GRID STYLES
 
 
 .wrap {
-	max-width: 960px;
+	max-width: 960px - (18*2);
 	width: 75%;
 
 }
@@ -151,11 +151,13 @@ NAVIGATION STYLES
 		
 
 		ul {
+			
+			max-width:380px;
 			margin: 0 auto;
-			text-align:center;
 			
 			li {
-				display: inline-block;
+				float: left;
+				position: relative;
 				border-right: 1px solid @gaf-blue;
 				border-top:none;
 				padding:0;
@@ -681,6 +683,9 @@ FOOTER STYLES
 	padding-bottom:30px;
 	.footer-logo{
 		.hide-text;
+		display:inline-block;
+		float: left;
+		padding-right:2%;
 	}
 	#HSA{
 		width:53px;
@@ -724,9 +729,6 @@ FOOTER STYLES
 				the footer.
 				*/
 				ul {}
-				&:first-child{
-					padding-left:0;
-				}
 			}
 		}
 	} /* end .footer-links */
@@ -735,13 +737,15 @@ FOOTER STYLES
 	div#inner-footer{
 
 		nav{
+			// .column(12);
 		}
 		p{
+			// .column(4);
 			font-size:.8em;
-			margin-top:0;
 			padding-right:2%;
 		}
 		aside{
+			// .column(10);
 		}
 	}
 
