@@ -150,10 +150,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 { 
-	font-family: 'Unibody8Bold';
+	font-family: 'DejaVuSansMonoBook';
 	font-weight: normal; 
-	font-size: 2.5em; 
+	font-size: 1.3em; 
 	line-height: 1.333em; 
+	color:@gaf-pink;
+	text-transform:uppercase;
 }
 
 h2, .h2 { 
@@ -193,16 +195,17 @@ HEADER SYTLES
 }
 
 	#logo {
-		// width:921px;
+		font-family: 'Unibody8Bold';
+		font-weight: normal; 
 		margin-left:-18px;
 		margin-right:-18px;
 		margin-top:90px;
 		padding-top:20px;
-		padding-bottom:160px;
-
+		padding-bottom:20px;
+		margin-bottom:0;
 		text-align: center;
 
-		font-size:1.5em;
+		font-size:1.6em;
 		background-color: @gaf-smoke;
 		span#logo-line-1{ color:@gaf-pink;}
 		span#logo-line-2{ color:@gaf-blue;}
@@ -221,7 +224,10 @@ NAVIGATION STYLES
 
 	
 		ul {
-			margin-top:-170px;
+			margin-top:0;
+			background-color:@gaf-smoke;
+			margin-left:-18px;
+			margin-right:-18px;
 			
 			li {
 				// background-color:@gaf-smoke;
