@@ -22,14 +22,9 @@ IMPORTING STYLES
 
 @import "normalize";
 @import "mixins";
-@import "grid";
 
-// Specify the number of columns and set column and gutter widths
-@columns: 24;
-@column-width: 30;
-@gutter-width: 10;
 
-@total-width: 100%;
+
 
 /*********************
 GENERAL STYLES
@@ -352,7 +347,7 @@ POSTS & CONTENT STYLES
 			
 		/* post content */
 		.post-content {
-			.column(24);
+
 
 			p {}
 			
@@ -360,9 +355,7 @@ POSTS & CONTENT STYLES
 			ul, ol, table, dl {}
 			
 			ul, ol {
-				.column(22);
-				.push(1);
-				.pull(1);
+
 				li {
 				}
 			

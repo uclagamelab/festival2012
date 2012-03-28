@@ -23,7 +23,7 @@ IE will get all the styles without any hefty work.
 
 /* import mixins */
 @import "mixins";
-@import "grid";
+
 
 /*********************
 GENERAL STYLES
@@ -84,6 +84,40 @@ LAYOUT & GRID STYLES
 	max-width: 960px - (18*2);
 	width: 75%;
 
+}
+
+/***** Grid Options down here, where they are usable ******/
+/* This is using the 1140 Grid System: http://cssgrid.net/ */
+.onecol    { width: 4.85%;  } /* grid_1  */
+.twocol    { width: 13.45%; } /* grid_2  */
+.threecol  { width: 22.05%; } /* grid_3  */
+.fourcol   { width: 30.75%; } /* grid_4  */
+.fivecol   { width: 39.45%; } /* grid_5  */
+.sixcol    { width: 48%;    } /* grid_6  */
+.sevencol  { width: 56.75%; } /* grid_7  */
+.eightcol  { width: 65.4%;  } /* grid_8  */
+.ninecol   { width: 74.05%; } /* grid_9  */
+.tencol    { width: 82.7%;  } /* grid_10 */
+.elevencol { width: 91.35%; } /* grid_11 */
+.twelvecol { width: 100%;   } /* grid_12 */
+
+/* layout & column defaults */
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol { 
+	float: left; 
+	position: relative;
+	margin-right: 3.8%; 
+}
+
+/* adding float to large column */
+.twelvecol {
+	float: left;
+	position: relative;
+}
+
+/* default styles & fixes */
+.last  { 
+	margin-right: 0; 
+	float: right;
 }
 
 
@@ -646,6 +680,7 @@ FOOTER STYLES
 *********************/
 
 .footer {
+	padding-bottom:30px;
 	.footer-logo{
 		.hide-text;
 		display:inline-block;
@@ -656,25 +691,21 @@ FOOTER STYLES
 		width:53px;
 		height:22px;
 		background: url(../images/HSA_logo.png) no-repeat;
-		// padding-right:10px;
 	}
 	#HAMMER{
 		width:113px;
 		height:23px;
 		background: url(../images/hammer_logo.png) no-repeat;
-		// padding-right:10px;
 	}
 	#TFT{
 		width:119px;
 		height:33px;
 		background: url(../images/TFT_logo.png) no-repeat;
-		// padding-right:10px;
 	}
 	#Arts{
 		width:147px;
 		height:44px;
 		background: url(../images/arts_logo.png) no-repeat;
-		// padding-right:10px;
 	}
 }
 	
@@ -704,16 +735,17 @@ FOOTER STYLES
 
 
 	div#inner-footer{
+
 		nav{
-			.column(12);
+			// .column(12);
 		}
 		p{
-			.column(4);
+			// .column(4);
 			font-size:.8em;
 			padding-right:2%;
 		}
 		aside{
-			.column(10);
+			// .column(10);
 		}
 	}
 
