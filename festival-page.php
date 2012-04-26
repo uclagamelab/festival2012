@@ -34,93 +34,35 @@ Template Name: Festival Page
 						<section id="who" class="row">
 							<h1>Presenting the following Games</h1>
 
-							<article id="post-1" class="game-article sixcol">
+							<!-- begin wordpress loop -->
+							<?php query_posts('cat=1'); ?>
+							<?php $c = 0; ?>
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php $custom_fields = get_post_custom(); ?>
+
+							<article id="post-<?php the_ID(); ?>" class="game-article sixcol <?php echo $c++&1 ? 'last' : ''?>" role="article">
 								
 								<header>
 
-									<h1>Comet Tail</h1>
-									<p>by Tobias Zarges<p>
-								
+									<h1><?php the_title(); ?></h1>
+									<p>
+										by <?php echo $custom_fields['credits'][0]; ?>
+									<p>
 								</header> <!-- end article header -->
 							
 								<section class="post-content">
-									<img src="http://placehold.it/464x307" alt="">
-									<div>In a game mixing skill, star charts and cosmic mandalas, players experience the end of the dinosaurs from the viewpoint of the comet.</div>
+									<?php the_post_thumbnail('gaf-thumb'); ?>
+									<div><?php the_content(); ?></div>
 							
 								</section> <!-- end section.post-content -->
 								<footer>
-									<a href="http://facebook.com/CometTail" class="game-link">http://facebook.com/CometTail</a>
+									<a href="<?php echo $custom_fields['link'][0]; ?>" class="game-link">project home page</a>
 								</footer>
 							
 							</article> <!-- end article -->
-
-							<article id="post-2" class="game-article sixcol last">
-								
-								<header>
-
-									<h1>The Charlatan</h1>
-									<p>by David Mershon</p>
-								
-								</header> <!-- end article header -->
-							
-								<section class="post-content">
-									<img src="http://placehold.it/464x307" alt="" >
-									<div>
-										How does science work, and when does it go wrong?  Why are we limited to the mundane set of animals that nature has provided and what can we do to combine these disappointing creatures into more exciting and relevant forms?
-									</div>
-
-							
-								</section> <!-- end section.post-content -->
-								<footer>
-									<a href="http://www.universalhappymaker.com/game/the-charlatan/" class="game-link">http://www.universalhappymaker.com/game/the-charlatan/</a>
-								</footer>
-							
-							</article> <!-- end article -->
-
-							<article id="post-1" class="game-article sixcol">
-								
-								<header>
-
-									<h1>Comet Tail</h1>
-									<p>by Tobias Zarges<p>
-								
-								</header> <!-- end article header -->
-							
-								<section class="post-content">
-									<img src="http://placehold.it/464x307" alt="">
-									<div>In a game mixing skill, star charts and cosmic mandalas, players experience the end of the dinosaurs from the viewpoint of the comet.</div>
-							
-								</section> <!-- end section.post-content -->
-								<footer>
-									<a href="http://facebook.com/CometTail" class="game-link">http://facebook.com/CometTail</a>
-								</footer>
-							
-							</article> <!-- end article -->
-
-							<article id="post-2" class="game-article sixcol last">
-								
-								<header>
-
-									<h1>The Charlatan</h1>
-									<p>by David Mershon</p>
-								
-								</header> <!-- end article header -->
-							
-								<section class="post-content">
-									<img src="http://placehold.it/464x307" alt="" >
-									<div>
-										How does science work, and when does it go wrong?  Why are we limited to the mundane set of animals that nature has provided and what can we do to combine these disappointing creatures into more exciting and relevant forms?
-									</div>
-
-							
-								</section> <!-- end section.post-content -->
-								<footer>
-									<a href="http://www.universalhappymaker.com/game/the-charlatan/" class="game-link">http://www.universalhappymaker.com/game/the-charlatan/</a>
-								</footer>
-							
-							</article> <!-- end article -->
-
-
+							<?php endwhile; else: ?>
+							<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+							<?php endif; ?>
 						</section><!-- end #showcase -->
 
 					</div> <!-- end #main -->

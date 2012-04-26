@@ -795,7 +795,7 @@ h1,
 .h1 {
   font-family: 'DejaVuSansMonoBook';
   font-weight: normal;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.333em;
   color: #ed145b;
   text-transform: uppercase;
@@ -913,10 +913,10 @@ section h1 {
 }
 section#when {
   color: #f6f5c6;
-  font-size: 1.3em;
 }
 section#when p span {
   color: #f6f5c6;
+  font-size: 1.3em;
 }
 section#what blockquote {
   color: #00aeef;
