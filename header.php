@@ -48,9 +48,9 @@
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
 					
-					<nav role="navigation" class="nav">
-						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-					</nav>
+					<!-- <nav role="navigation" class="nav"> -->
+						<?php //bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					<!-- </nav> -->
 				
 				</div> <!-- end #inner-header -->
 			

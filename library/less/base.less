@@ -85,7 +85,7 @@ LAYOUT & GRID STYLES
 .wrap { 
 	width: 90%;
 	margin: 0 auto;
-	background-color: #420a23;
+	background-color: @gaf-background;
 	padding-left:18px;
 	padding-right:18px;
 	border: 1px solid @gaf-pink;
@@ -152,7 +152,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 { 
 	font-family: 'DejaVuSansMonoBook';
 	font-weight: normal; 
-	font-size: 1.3em; 
+	font-size: 1.4em; 
 	line-height: 1.333em; 
 	color:@gaf-pink;
 	text-transform:uppercase;
@@ -199,7 +199,7 @@ HEADER SYTLES
 		font-weight: normal; 
 		margin-left:-18px;
 		margin-right:-18px;
-		margin-top:90px;
+		margin-top:20px;
 		padding-top:20px;
 		padding-bottom:20px;
 		margin-bottom:0;
@@ -308,13 +308,51 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
+section{
+	h1{
+		font-size:1.7em;
+	}
+}
+section#when{
+	color: @gaf-cream;
+	font-size:1.3em;
+
+	p span{
+		color:@gaf-cream;
+	}
+}
+section#what{
+	blockquote{
+		color: @gaf-blue;
+		font-size:1.3em;
+	}
+}
+
 #content { 
 	// margin-top: 2.2em; 
 	div#inner-content{
 		border-bottom:1px solid @gaf-pink;
+		padding-bottom:20px;
 	}
 }	
-		
+		article.game-article{
+			padding:10px 0 10px 0;
+			margin-bottom:20px;
+			border-right: 1px solid @gaf-smoke;
+			border-bottom: 1px solid @gaf-smoke;
+			background: lighten(@gaf-background, 5%);
+			.borderRadius(6px);
+			header{
+				h1{
+					font-size:1.4em;
+				}
+			}
+			header, section, footer{
+				padding:0 10px;
+			}
+		} /* end .game-article */
+
+
 		.hentry {
 		
 			header {
