@@ -40,7 +40,7 @@ Template Name: Festival Page
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php $custom_fields = get_post_custom(); ?>
 
-							<article id="post-<?php the_ID(); ?>" class="game-article sixcol <?php echo $c++&1 ? 'last' : ''?>" role="article">
+							<article id="post-<?php the_ID(); ?>" class="game-article sixcol clearfix <?php echo $c++&1 ? 'last' : ''?>" role="article">
 								
 								<header>
 
@@ -52,7 +52,7 @@ Template Name: Festival Page
 							
 								<section class="post-content">
 									<?php the_post_thumbnail('gaf-thumb'); ?>
-									<div><?php the_content(); ?></div>
+									<div><?php the_excerpt(); ?></div>
 							
 								</section> <!-- end section.post-content -->
 								<footer>
