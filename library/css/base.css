@@ -919,8 +919,10 @@ section#when p span {
   font-size: 1.3em;
 }
 section#what blockquote {
-  color: #00aeef;
   font-size: 1.3em;
+}
+section#locations .time {
+  color: #00aeef;
 }
 #content div#inner-content {
   border-bottom: 1px solid #ed145b;
