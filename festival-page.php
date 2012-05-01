@@ -52,9 +52,11 @@ Template Name: Festival Page
 									<div><?php the_excerpt(); ?></div>
 							
 								</section> <!-- end section.post-content -->
+								<?php if($custom_fields['link'][0] != ""){ ?>
 								<footer>
 									<a href="<?php echo $custom_fields['link'][0]; ?>" class="game-link">project home page</a>
 								</footer>
+								<?php } ?>
 							
 							</article> <!-- end article -->
 							<?php endwhile; else: ?>
